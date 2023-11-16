@@ -1,20 +1,89 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<!-- header.component.html -->
+<ion-content class="home-page">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>home</ion-title>
+        <ion-buttons slot="start">
+         <ion-menu-button  menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <img
+    class="ban-img"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdACnn-N4LgJv78L1nGKRQ_eYqyYhY4dT_0A&usqp=CAU"
+    alt=""
+  />
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <div class="card-content">
+          <img
+            alt="Silhouette of mountains"
+            src="https://i.pinimg.com/originals/85/58/29/85582987f7125e4868fdcb28661e934f.png"
+          />
+          <ion-card-header>
+            <ion-card-title>Tom</ion-card-title>
+          </ion-card-header>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="card-content">
+          <img
+            alt="Silhouette of mountains"
+            src="https://www.pngitem.com/pimgs/m/47-471008_baby-tom-and-jerry-cartoons-tom-and-jerry.png"
+          />
+          <ion-card-header>
+            <ion-card-title>jerry</ion-card-title>
+          </ion-card-header>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="card-content">
+          <img
+            alt="Silhouette of mountains"
+            src="https://www.loudegg.com/wp-content/uploads/2020/10/Mickey-Mouse.jpg"
+          />
+          <ion-card-header>
+            <ion-card-title>Mouse</ion-card-title>
+          </ion-card-header>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="card-content">
+          <img
+            alt="Silhouette of mountains"
+            src="https://i0.wp.com/godinallthings.com/wp-content/uploads/2013/01/donald-duck.gif?fit=251%2C308&ssl=1"
+          />
+          <ion-card-header>
+            <ion-card-title>duck</ion-card-title>
+          </ion-card-header>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="card-content">
+          <img
+            alt="Silhouette of mountains"
+            src="https://www.loudegg.com/wp-content/uploads/2020/10/Mickey-Mouse.jpg"
+          />
+          <ion-card-header>
+            <ion-card-title>Mickey Mouse</ion-card-title>
+          </ion-card-header>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="card-content">
+          <img
+            alt="Silhouette of mountains"
+            src="https://i.pinimg.com/originals/85/58/29/85582987f7125e4868fdcb28661e934f.png"
+          />
+          <ion-card-header>
+            <ion-card-title>Tom</ion-card-title>
+          </ion-card-header>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
