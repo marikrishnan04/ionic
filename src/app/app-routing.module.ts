@@ -8,9 +8,21 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'orderpage',
     pathMatch: 'full'
   },
+  {
+    path: 'orderpage',
+    loadChildren: () => import('./orderpage/orderpage.module').then( m => m.OrderpagePageModule)
+  },
+  {
+    path: 'viewproducts',
+    loadChildren: () => import('./viewproducts/viewproducts.module').then( m => m.ViewproductsPageModule)
+  },
+
+
+
+
 ];
 
 @NgModule({

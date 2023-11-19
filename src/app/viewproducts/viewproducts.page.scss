@@ -1,0 +1,111 @@
+
+.header-md {
+  box-shadow: none !important;
+  position: sticky;
+  top: 0;
+}
+.header-nav {
+  padding-inline-end: 14px !important;
+}
+.header-menu{
+  display: flex;
+  align-items: center;
+  width: 100% !important;
+}
+/* swiper.component.css */
+.swiper-container {
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  overflow: hidden; /* Ensure images don't extend beyond the slide */
+  img {
+    height: 100% !important;
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+.swiper-wrapper {
+  height: 23vh !important;
+}
+
+// viewproducts............
+
+.viewproducts {
+  h4{
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .viewproducts-aside {
+    box-shadow: rgba(100, 100, 111, 0.075) 0px 3px 3px 0px;
+    border-radius: 8px;
+    height: 100vh;
+    overflow: scroll;
+  }
+  .viewproducts-article {
+    box-shadow: rgba(100, 100, 111, 0.075) 0px 3px 3px 0px;
+    border-radius: 8px;
+
+.viewproducts-article-con{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: rgba(100, 100, 111, 0.075) 1px 2px 2px 0px;
+}
+    .viewproducts-article-content{
+      text-align: start !important;
+
+         h5{
+          font-size: 16px;
+          font-weight: bold;
+          padding-top: 8px;
+         }
+         p{
+          font-size: 13px;
+          font-weight:700 ;
+          color: #e5ad06;
+         }
+         span{
+          color: rgb(158, 158, 158);
+          font-size: 13px;
+         }
+         .article-price{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span{
+            color: black;
+          }
+            p{
+         padding: 3px 10px ;
+         border: solid 1px rgb(143, 141, 141);
+         border-radius: 14px;
+         font-size: small;
+         color: rgb(14, 207, 14);
+            }
+         }
+    }
+    img {
+      height: 120px;
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+  .viewproducts-img {
+    width: 100%;
+
+    img {
+      width: 48%;
+      border-radius: 7px;
+      height: 50px;
+    }
+  }
+  p {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 !important;
+  }
+}

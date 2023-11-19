@@ -1,0 +1,57 @@
+.home-page{
+  overflow: auto
+}
+.header-md {
+  box-shadow: none !important;
+  position: sticky;
+  top: 0;
+}
+.header-nav {
+  padding-inline-end: 14px !important;
+}
+
+//banner section............
+.banner{
+  position: relative;
+  padding: 0 10px;
+  button{
+    position: absolute;
+    bottom: 42px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 15px;
+    background: #f4f5f8;
+    color: #ffc107ad;
+    border-radius: 7px;
+  }
+  img{
+    border-radius: 16px;
+    width: 100%;
+  }
+}
+
+// categorysection.................
+.category{
+
+    h6{
+       font-size: 16px;
+        font-weight: 600;
+    }
+  .category-img{
+
+    width: 100%;
+
+    img{
+      width: 100%;
+      border-radius: 10px;
+      height: 80px;
+    }
+  }
+  p{
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+
