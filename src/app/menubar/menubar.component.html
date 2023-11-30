@@ -2,4 +2,40 @@
   <ion-header>
     <div class="menu-header"></div>
   </ion-header>
+  <ion-content>
+    <div class="text-center"><ion-title >Menu list</ion-title></div>
+
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/orderpage']">
+          <ion-icon name="cellular-outline"></ion-icon>
+          <ion-label>Orderpage</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/viewproducts']">
+          <ion-icon name="fast-food-outline"></ion-icon>
+          <ion-label>viewproducts</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/view-carts']">
+          <ion-icon name="cart-outline"></ion-icon>
+          <ion-label>viewCart</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/bill-details']">
+          <ion-icon name="card-outline"></ion-icon>
+                    <ion-label>Bill details</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/address']">
+          <ion-icon name="accessibility-outline"></ion-icon>
+          <ion-label>Address</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
 </ion-menu>

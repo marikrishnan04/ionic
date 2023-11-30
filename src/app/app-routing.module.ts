@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'orderpage',
+    redirectTo: 'address',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,22 @@ const routes: Routes = [
   {
     path: 'viewproducts',
     loadChildren: () => import('./viewproducts/viewproducts.module').then( m => m.ViewproductsPageModule)
+  },
+  {
+    path: 'view-carts',
+    loadChildren: () => import('./view-carts/view-carts.module').then( m => m.ViewCartsPageModule)
+  },
+  {
+    path: 'bill-details',
+    loadChildren: () => import('./bill-details/bill-details.module').then( m => m.BillDetailsPageModule)
+  },
+  {
+    path: 'address',
+    loadChildren: () => import('./address/address.module').then( m => m.AddressPageModule)
+  },
+  {
+    path: 'editaddress',
+    loadChildren: () => import('./editaddress/editaddress.module').then( m => m.EditaddressPageModule)
   },
 
 

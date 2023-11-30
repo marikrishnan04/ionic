@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import Swiper from 'swiper';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewproducts',
@@ -8,16 +9,32 @@ import Swiper from 'swiper';
 })
 export class ViewproductsPage implements OnInit {
 
+
+  constructor(private router: Router) {}
+
+  image: any;
+  name: any;
+  count:number = 0
+
   slides = [
     { id: 1, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRfpZB0_3qGRT0vx7Jlw662goIgQc9en4esg&usqp=CAU' },
     { id: 2, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN9bUCNCOYWj4sEYJ2k-4wF-NgDWYytM1sog&usqp=CAU' },
     { id: 3, image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNEU8jng4qYUNybPdBZn9cSUeQSBLzIreQcw&usqp=CAU' },
     // Add more slides as needed
   ];
+  goViewCarts() {
+
+    this.router.navigate(['/view-carts']); // Replace 'view-carts' with the actual route of your new page
+
+  }
 
   ngOnInit() {
-    // Initialize Swiper
-    var swiper = new Swiper('.swiper-container', {
+    this.initializeSwiper();
+    this.retrieveProductDetails();
+  }
+
+  private initializeSwiper() {
+    const swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
       spaceBetween: 10,
       navigation: {
@@ -30,4 +47,31 @@ export class ViewproductsPage implements OnInit {
       },
     });
   }
+
+  private retrieveProductDetails() {
+    console.log(localStorage.getItem('product'));
+    this.image = localStorage.getItem('product');
+    this.name = localStorage.getItem('productName');
+  }
+
+  increment() {
+   this.count++;
+  }
+
+  decrement() {
+    if (this.count > 0) {
+      this.count--;
+    }
+  }
+  visible:boolean = false
+
+  openpopup(){
+    this.visible = true;
+    console.log("hello");
+
+  }
+  closepopup(){
+    this.visible =!this.visible;
+  }
+
 }

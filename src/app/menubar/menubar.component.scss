@@ -1,12 +1,39 @@
 .menu-header{
   background-image: radial-gradient(circle 975px at 2.6% 48.3%, #0d6efd 0%, rgb(95, 184, 224) 140.7%);
-  /* height: 20vh; */
-  transform: rotate(-32deg);
+  transform: rotate(285deg);
   position: relative;
-  top: -87px;
-  border-bottom-left-radius: 67%;
-  padding: 86px;
+  top: -201px;
+  padding: 144px;
+  left: -150px;
+  border-bottom-left-radius: 102px;
 }
 .header-md {
   box-shadow: none  !important;
+  height: 12vh !important;
+}
+ion-title{
+  font-size: 22px;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: solid 2px #1273fb;
+  display: inline-block;
+  padding: 0;
+}
+ion-title::after{
+  content: "";
+  height: 2px;
+  border-bottom: #0d6efd 1px solid;
+  width: auto;
+}
+ion-label{
+  font-size: 16px;
+  font-weight: bold;
+}
+ion-icon{
+  font-size: 20px;
+  font-weight: bold;
+  color: #0d6efd;
+  padding-right: 20px;
+
 }

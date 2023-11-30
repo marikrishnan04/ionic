@@ -12,8 +12,11 @@ export class OrderpagePage implements OnInit {
 
   constructor(private router: Router) {}
 
-  goViewproducts() {
+  goViewproducts(data?:any,name?:any) {
+    localStorage.setItem('productName',name)
+    localStorage.setItem('product',data)
     this.router.navigate(['/viewproducts']); // Replace 'viewproducts' with the actual route of your new page
+
   }
   slides = [
     { id: 1, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },

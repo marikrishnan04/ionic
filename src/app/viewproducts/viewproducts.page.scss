@@ -1,3 +1,7 @@
+*{
+  transition: 1s all ease;
+
+}
 
 .header-md {
   box-shadow: none !important;
@@ -7,7 +11,7 @@
 .header-nav {
   padding-inline-end: 14px !important;
 }
-.header-menu{
+.header-menu {
   display: flex;
   align-items: center;
   width: 100% !important;
@@ -36,7 +40,7 @@
 // viewproducts............
 
 .viewproducts {
-  h4{
+  h4 {
     font-size: 14px;
     font-weight: 400;
   }
@@ -45,48 +49,87 @@
     border-radius: 8px;
     height: 100vh;
     overflow: scroll;
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
   }
   .viewproducts-article {
     box-shadow: rgba(100, 100, 111, 0.075) 0px 3px 3px 0px;
     border-radius: 8px;
+    height: 100vh;
+    overflow: scroll;
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
 
-.viewproducts-article-con{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-shadow: rgba(100, 100, 111, 0.075) 1px 2px 2px 0px;
-}
-    .viewproducts-article-content{
+    .viewproducts-article-con {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-shadow: rgba(100, 100, 111, 0.075) 1px 2px 2px 0px;
+    }
+    .viewproducts-article-content {
       text-align: start !important;
-
-         h5{
-          font-size: 16px;
-          font-weight: bold;
-          padding-top: 8px;
-         }
-         p{
-          font-size: 13px;
-          font-weight:700 ;
-          color: #e5ad06;
-         }
-         span{
-          color: rgb(158, 158, 158);
-          font-size: 13px;
-         }
-         .article-price{
+      ion-modal{
+        height: 30px !important;
+      }
+      h5 {
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 8px;
+      }
+      p {
+        font-size: 10px;
+        font-weight: 700;
+        color: #e5ad06;
+      }
+      span {
+        color: rgb(158, 158, 158);
+        font-size: 10px;
+      }
+      .article-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          color: black;
+        }
+        p {
+          padding: 3px 10px;
+          border: solid 1px rgb(143, 141, 141);
+          border-radius: 14px;
+          font-size: 10px;
+          color: rgb(14, 207, 14);
           display: flex;
-          justify-content: space-between;
           align-items: center;
-          span{
-            color: black;
+          height: 20px;
+          overflow: hidden;
+
+          ion-select::part(icon) {
+            color: #971e49;
+  display: none !important;
           }
-            p{
-         padding: 3px 10px ;
-         border: solid 1px rgb(143, 141, 141);
-         border-radius: 14px;
-         font-size: small;
-         color: rgb(14, 207, 14);
-            }
-         }
+          .select-wrapper {
+            border: none !important;
+          }
+          button {
+            color: rgb(14, 207, 14);
+            background: none;
+          }
+          span {
+            color: rgb(14, 207, 14);
+            padding: 0 4px;
+          }
+        }
+
+
+
+      }
+      ion-popover {
+        height: 10vh;
+      }
+
     }
     img {
       height: 120px;
@@ -107,5 +150,62 @@
     font-size: 10px;
     font-weight: bold;
     margin: 0 !important;
+    padding-top: 6px;
+  }
+}
+// openpoup.................
+
+.popup{
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+  margin-top: 16px;
+  padding-top: 12px;
+  padding: 9px;
+  transition: all 1s ease;
+  position: sticky;
+  bottom: 0;
+  .popup-content{
+    background: #2dd36f;
+    border-radius: 11px;
+    padding: 3px 18px;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      margin: 0;
+    }
+    h6{
+      font-size: 14px !important;
+      font-weight: 600;
+      padding-top: 5px;
+    }
+
+
+  }
+
+  .popup-top{
+    display: flex;
+    justify-content: space-evenly;
+    .popup-emoji{
+      border-radius: 50%;
+      padding: 8px;
+      background: #2dd36f;
+      position: relative;
+      top: -23px;
+      border: solid 2px white;
+
+    }
+    p{
+      font-size: 11px;
+      margin: 0;
+      span{
+        font-size: 12px !important;
+        font-weight: 600;
+      }
+    }
+
   }
 }
