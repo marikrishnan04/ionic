@@ -9,6 +9,10 @@ import Swiper from 'swiper';
   styleUrls: ['./orderpage.page.scss'],
 })
 export class OrderpagePage implements OnInit {
+  isSearchBarOpen = false;
+  closeicon=true;
+  cancelicon=false;
+  searchQuery: string = '';
 
   constructor(private router: Router) {}
 
@@ -24,6 +28,25 @@ export class OrderpagePage implements OnInit {
     { id: 3, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
     // Add more slides as needed
   ];
+  cancelSearch(){
+    this.cancelicon = false;
+    this.isSearchBarOpen = false;
+    this.closeicon=true;
+  }
+  openSearch() {
+    this.isSearchBarOpen = true;
+    this.closeicon=false
+    this.cancelicon = true;
+  }
+  closeSearch() {
+    this.isSearchBarOpen = false;
+    // You can perform additional actions when closing the search bar
+  }
+
+  clearSearch() {
+    this.searchQuery = '';
+    // You can perform additional actions when clearing the search query
+  }
 
   ngOnInit() {
     // Initialize Swiper

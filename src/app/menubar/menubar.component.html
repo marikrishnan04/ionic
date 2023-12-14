@@ -3,7 +3,7 @@
     <div class="menu-header"></div>
   </ion-header>
   <ion-content>
-    <div class="text-center"><ion-title >Menu list</ion-title></div>
+    <div class="text-center"><ion-title>Menu list</ion-title></div>
 
     <ion-list>
       <ion-menu-toggle>
@@ -27,13 +27,25 @@
       <ion-menu-toggle>
         <ion-item [routerLink]="['/bill-details']">
           <ion-icon name="card-outline"></ion-icon>
-                    <ion-label>Bill details</ion-label>
+          <ion-label>Bill details</ion-label>
         </ion-item>
       </ion-menu-toggle>
       <ion-menu-toggle>
         <ion-item [routerLink]="['/address']">
           <ion-icon name="accessibility-outline"></ion-icon>
           <ion-label>Address</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/yourorder']">
+          <ion-icon name="wallet-outline"></ion-icon>
+          <ion-label>Your order</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item [routerLink]="['/yourhistory']">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <ion-label>Order history</ion-label>
         </ion-item>
       </ion-menu-toggle>
     </ion-list>

@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'address',
+    redirectTo: 'orderpage',
     pathMatch: 'full'
   },
   {
@@ -35,6 +35,20 @@ const routes: Routes = [
     path: 'editaddress',
     loadChildren: () => import('./editaddress/editaddress.module').then( m => m.EditaddressPageModule)
   },
+
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'yourorder',
+    loadChildren: () => import('./yourorder/yourorder.module').then( m => m.YourorderPageModule)
+  },
+  {
+    path: 'yourhistory',
+    loadChildren: () => import('./yourhistory/yourhistory.module').then( m => m.YourhistoryPageModule)
+  },
+
 
 
 

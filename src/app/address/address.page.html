@@ -1,10 +1,9 @@
-<ion-content class="address">
-  <ion-header> <div class="address-top"></div></ion-header>
-  <h1 class="text-center">your wish</h1>
+<div class="address">
+  <div class="address-edit" (click)="goeditaddress()">
+    <ion-icon name="person-add-outline"></ion-icon>
+  </div>
   <form action="" class="address-form">
-    <div class="address-edit" (click)="goeditaddress()">
-      <ion-icon name="person-add-outline"></ion-icon>
-    </div>
+    <h1 class="text-center">your wish</h1>
     <div class="address-input">
       <ion-icon name="people-outline"></ion-icon
       ><ion-label color="primary">Name</ion-label>
@@ -39,5 +38,4 @@
       <button #toggle checked="false" (click)=" presentAlert()">sumbit</button>
     </div>
   </form>
-  <footer><div class="address-bottom"></div></footer>
-</ion-content>
+</div>

@@ -9,7 +9,10 @@ import { Router } from '@angular/router';
 })
 export class ViewproductsPage implements OnInit {
 
-
+  isSearchBarOpen = false;
+  closeicon=true;
+  cancelicon=false;
+  searchQuery: string = '';
   constructor(private router: Router) {}
 
   image: any;
@@ -73,5 +76,23 @@ export class ViewproductsPage implements OnInit {
   closepopup(){
     this.visible =!this.visible;
   }
+  cancelSearch(){
+    this.cancelicon = false;
+    this.isSearchBarOpen = false;
+    this.closeicon=true;
+  }
+  openSearch() {
+    this.isSearchBarOpen = true;
+    this.closeicon=false
+    this.cancelicon = true;
+  }
+  closeSearch() {
+    this.isSearchBarOpen = false;
+    // You can perform additional actions when closing the search bar
+  }
 
+  clearSearch() {
+    this.searchQuery = '';
+    // You can perform additional actions when clearing the search query
+  }
 }

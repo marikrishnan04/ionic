@@ -2,12 +2,34 @@
 <ion-content class="home-page" value="overlay">
   <ion-header>
     <ion-toolbar class="header-nav">
-          <ion-title class="text-center">Instamart</ion-title>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-          <ion-icon slot="end" name="search"></ion-icon>
-      </ion-toolbar>
+      <ion-title class="text-center">Instamart</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-icon
+      class="searchicon"
+        slot="end"
+        name="search"
+        (click)="openSearch()"
+        *ngIf="closeicon"
+      ></ion-icon>
+      <ion-icon
+      class="searchicon"
+        slot="end"
+        name="close-outline"
+        (click)="cancelSearch()"
+        *ngIf="cancelicon"
+      ></ion-icon>
+      <ion-icon name="person-circle"  slot="end" class="profile" [routerLink]="['/profile']"></ion-icon>
+    </ion-toolbar>
+    <!-- Search bar -->
+    <ion-searchbar
+      slot="end"
+      *ngIf="isSearchBarOpen"
+      [(ngModel)]="searchQuery"
+      (ionCancel)="closeSearch()"
+      (ionClear)="clearSearch()"
+    ></ion-searchbar>
   </ion-header>
 
   <!----------------------- banner section -------------------->
@@ -26,8 +48,11 @@
     <ion-grid>
       <h6>Trending neer you</h6>
       <ion-row>
-        <ion-col size-xs="3" size-lg="2" size-md="2" class="text-center" >
-          <div class="category-img" (click)="goViewproducts('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-4vswJyxwNZDbCORQACoEgYPz-w3lHidWAw&usqp=CAU','Furits')" >
+        <ion-col size-xs="3" size-lg="2" size-md="2" class="text-center">
+          <div
+            class="category-img"
+            (click)="goViewproducts('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-4vswJyxwNZDbCORQACoEgYPz-w3lHidWAw&usqp=CAU','Furits')"
+          >
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-4vswJyxwNZDbCORQACoEgYPz-w3lHidWAw&usqp=CAU"
               alt=""

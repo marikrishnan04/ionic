@@ -2,7 +2,13 @@
   transition: 1s all ease;
 
 }
+.searchicon{
+  padding-right: 10px;
+}
+.profile{
 
+  font-size: 30px;
+}
 .header-md {
   box-shadow: none !important;
   position: sticky;
@@ -40,6 +46,8 @@
 // viewproducts............
 
 .viewproducts {
+  height: 86vh !important;
+  overflow: hidden;
   h4 {
     font-size: 14px;
     font-weight: 400;
@@ -164,7 +172,8 @@
   padding: 9px;
   transition: all 1s ease;
   position: sticky;
-  bottom: 0;
+  bottom: 56px;
+  background: white;
   .popup-content{
     background: #2dd36f;
     border-radius: 11px;

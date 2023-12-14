@@ -5,13 +5,35 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-icon slot="end" name="search"></ion-icon>
+      <ion-icon
+      class="searchicon"
+        slot="end"
+        name="search"
+        (click)="openSearch()"
+        *ngIf="closeicon"
+      ></ion-icon>
+      <ion-icon
+      class="searchicon"
+        slot="end"
+        name="close-outline"
+        (click)="cancelSearch()"
+        *ngIf="cancelicon"
+      ></ion-icon>
+      <ion-icon name="person-circle"  slot="end" class="profile" [routerLink]="['/profile']"></ion-icon>
     </ion-toolbar>
+    <!-- Search bar -->
+    <ion-searchbar
+      slot="end"
+      *ngIf="isSearchBarOpen"
+      [(ngModel)]="searchQuery"
+      (ionCancel)="closeSearch()"
+      (ionClear)="clearSearch()"
+    ></ion-searchbar>
   </ion-header>
 
   <!-- viewproducts -->
 
-  <ion-content class="viewproducts">
+  <div class="viewproducts">
     <ion-grid>
       <ion-row>
         <ion-col class="viewproducts-aside">
@@ -136,43 +158,6 @@
                 size-lg="3"
                 size-md="4"
                 class="viewproducts-article-con"
-              >
-                <div class="viewproducts-article-img">
-                  <img [src]="image" alt="" />
-                </div>
-                <div class="viewproducts-article-content">
-                  <h5>{{name}}</h5>
-                  <p>Collection furits</p>
-                  <span>1 piece x 3</span>
-                  <div class="article-price">
-                    <span>₹341</span>
-                    <p>
-                      <ion-select
-                        aria-label="Fruit"
-                        toggleIcon="none"
-                        placeholder="options"
-                        class="m-0 p-0"
-                      >
-                        <ion-select-option value="apples"
-                          >Apples</ion-select-option
-                        >
-                        <ion-select-option value="oranges"
-                          >Oranges</ion-select-option
-                        >
-                        <ion-select-option value="bananas"
-                          >Bananas</ion-select-option
-                        >
-                      </ion-select>
-                    </p>
-                  </div>
-                </div>
-              </ion-col>
-              <ion-col
-                size-xs="6"
-                size-sm="6"
-                size-lg="3"
-                size-md="4"
-                class="viewproducts-article-con"
                 (click)="openpopup()"
               >
                 <div class="viewproducts-article-img">
@@ -199,12 +184,44 @@
                   </div>
                 </div>
               </ion-col>
+              <ion-col
+              size-xs="6"
+              size-sm="6"
+              size-lg="3"
+              size-md="4"
+              class="viewproducts-article-con"
+              (click)="openpopup()"
+            >
+              <div class="viewproducts-article-img">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
+                  alt=""
+                />
+              </div>
+              <div class="viewproducts-article-content">
+                <h5>Fresh Furits</h5>
+                <p>collection furits</p>
+                <span>1 piece x 3</span>
+                <div class="article-price">
+                  <span>₹341</span>
+                  <p>
+                    <button class="add-btn" clear (click)="decrement()">
+                      <ion-icon name="remove"></ion-icon>
+                    </button>
+                    <span>{{count}} </span>
+                    <button class="add-btn" clear (click)="increment()">
+                      <ion-icon name="add"></ion-icon>
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </ion-col>
             </ion-row>
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-content>
+  </div>
 </ion-content>
 <div *ngIf="visible" class="popup">
   <div class="popup-top">

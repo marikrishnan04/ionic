@@ -1,5 +1,15 @@
-.home-page{
-  overflow: auto
+* {
+  transition: 1s all ease !important;
+}
+.home-page {
+  overflow: auto;
+}
+.searchicon{
+  padding-right: 10px;
+}
+.profile{
+
+  font-size: 30px;
 }
 .header-md {
   box-shadow: none !important;
@@ -9,15 +19,19 @@
 .header-nav {
   padding-inline-end: 14px !important;
 }
+ion-searchbar{
+  padding-bottom: 8px !important;
+  background: white;
+}
 
 //banner section............
 // .swiper-wrapper {
 //   height: 30vh !important;
 // }
-.banner{
+.banner {
   position: relative;
   padding: 0 10px;
-  button{
+  button {
     position: absolute;
     bottom: 42px;
     right: 20px;
@@ -28,33 +42,30 @@
     color: #ffc107ad;
     border-radius: 7px;
   }
-  img{
+  img {
     border-radius: 16px;
     width: 100%;
   }
 }
 
 // categorysection.................
-.category{
-
-    h6{
-       font-size: 16px;
-        font-weight: 600;
-    }
-  .category-img{
-
+.category {
+  h6 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .category-img {
     width: 100%;
 
-    img{
+    img {
       width: 100%;
       border-radius: 10px;
       height: 80px;
     }
   }
-  p{
+  p {
     font-size: 14px;
     font-weight: bold;
   }
 }
-
 

@@ -1,69 +1,50 @@
 * {
     transition: 1s all ease;
-  font-family: monospace;
   p{
     margin-bottom: 0px !important;
   }
 }
-
+.address{
+  overflow: auto;
+  height: 93vh;
+}
 .header-md {
   box-shadow: none !important;
   height: 12vh !important;
 }
-.address-top {
-  background-image: radial-gradient(
-    circle 975px at 2.6% 48.3%,
-    #0d6efd 0%,
-    rgb(95, 184, 224) 140.7%
-  );
-  transform: rotate(340deg);
-  position: fixed;
-  top: -120px;
-  border-bottom-left-radius: 59%;
-  padding: 86px;
-  width: 100%;
-}
 
-.address-bottom {
-  background-image: radial-gradient(
-    circle 975px at 2.6% 48.3%,
-    #495057 0%,
-    #343a40 140.7%
-  );
-  transform: rotate(161deg);
-  position: fixed;
-  border-bottom-left-radius: 59%;
-  padding: 86px;
-  bottom: -121px;
-  width: 100%;
-}
-footer {
-  box-shadow: none !important;
-  height: 8vh !important;
+.address-edit {
+  display: flex;
+  justify-content: center;
+  ion-icon {
+    background: #1373fb;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    padding: 10px;
+    /* height: 44px; */
+    /* width: 45px; */
+    box-shadow: rgba(0, 0, 0, 0.125) 0px 30px 60px -12px inset, #212529 0px 18px 36px -18px inset;
+    border: solid 8px white;
+  }
 }
 .address-form {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 20px;
+  padding: 0px 0px 10px 0px;
   margin: 16px;
   border-radius: 20px;
   position: relative;
-  .address-edit {
-    display: flex;
-    justify-content: center;
-    ion-icon {
-      position: absolute;
-      top: -21px;
-      background: #1373fb;
-      color: white;
-      font-size: 28px;
-      border-radius: 50%;
-      padding: 10px;
-      /* height: 44px; */
-      /* width: 45px; */
-      box-shadow: rgba(0, 0, 0, 0.125) 0px 30px 60px -12px inset, #212529 0px 18px 36px -18px inset;
-      border: solid 8px white;
-    }
+  margin-top: 10px;
+  overflow: hidden;
+  h1{
+    color: white;
+    background: #1373fb;
+    font-size: 25px;
+    padding: 10px 0;
+
+
   }
+
   .address-button{
       text-align: center;
       button{
@@ -81,6 +62,10 @@ footer {
 
 .address-input {
   padding: 6px 18px;
+  background: #f8f9fa;
+    margin: 21px 10px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px -20px;
   ion-icon {
     font-size: 22px;
     color: #3880ff;
