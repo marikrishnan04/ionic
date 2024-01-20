@@ -1,6 +1,7 @@
 // orderpage.page.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular'; // Import the AlertController
 import Swiper from 'swiper';
 
 @Component({
@@ -10,34 +11,40 @@ import Swiper from 'swiper';
 })
 export class OrderpagePage implements OnInit {
   isSearchBarOpen = false;
-  closeicon=true;
-  cancelicon=false;
+  closeicon = true;
+  cancelicon = false;
   searchQuery: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private alertController: AlertController) {} // Inject the AlertController
 
-  goViewproducts(data?:any,name?:any) {
-    localStorage.setItem('productName',name)
-    localStorage.setItem('product',data)
+  goViewproducts(data?: any, name?: any) {
+    localStorage.setItem('productName', name);
+    localStorage.setItem('product', data);
     this.router.navigate(['/viewproducts']); // Replace 'viewproducts' with the actual route of your new page
-
   }
+
   slides = [
     { id: 1, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
     { id: 2, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
     { id: 3, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
+    { id: 4, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
+    { id: 5, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
+    { id: 6, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
     // Add more slides as needed
   ];
-  cancelSearch(){
+
+  cancelSearch() {
     this.cancelicon = false;
     this.isSearchBarOpen = false;
-    this.closeicon=true;
+    this.closeicon = true;
   }
+
   openSearch() {
     this.isSearchBarOpen = true;
-    this.closeicon=false
+    this.closeicon = false;
     this.cancelicon = true;
   }
+
   closeSearch() {
     this.isSearchBarOpen = false;
     // You can perform additional actions when closing the search bar
@@ -48,7 +55,8 @@ export class OrderpagePage implements OnInit {
     // You can perform additional actions when clearing the search query
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+
     // Initialize Swiper
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
@@ -62,7 +70,21 @@ export class OrderpagePage implements OnInit {
         clickable: true,
       },
     });
+    const alert = await this.alertController.create({
+      header: 'Welcome!',
+      message: 'This is your first visit.',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            // Handle OK button click if needed
+          }
+        }
+      ],
+      cssClass: 'my-alert-class' // Add a custom CSS class
+    });
+
+    await alert.present();
+
   }
-
-
 }

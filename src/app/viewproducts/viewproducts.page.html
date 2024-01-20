@@ -5,30 +5,14 @@
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-icon
-      class="searchicon"
-        slot="end"
-        name="search"
-        (click)="openSearch()"
-        *ngIf="closeicon"
-      ></ion-icon>
-      <ion-icon
-      class="searchicon"
-        slot="end"
-        name="close-outline"
-        (click)="cancelSearch()"
-        *ngIf="cancelicon"
-      ></ion-icon>
-      <ion-icon name="person-circle"  slot="end" class="profile" [routerLink]="['/profile']"></ion-icon>
+      <ion-icon class="searchicon" slot="end" name="search" (click)="openSearch()" *ngIf="closeicon"></ion-icon>
+      <ion-icon class="searchicon" slot="end" name="close-outline" (click)="cancelSearch()"
+        *ngIf="cancelicon"></ion-icon>
+      <ion-icon name="person-circle" slot="end" class="profile" [routerLink]="['/profile']"></ion-icon>
     </ion-toolbar>
     <!-- Search bar -->
-    <ion-searchbar
-      slot="end"
-      *ngIf="isSearchBarOpen"
-      [(ngModel)]="searchQuery"
-      (ionCancel)="closeSearch()"
-      (ionClear)="clearSearch()"
-    ></ion-searchbar>
+    <ion-searchbar slot="end" *ngIf="isSearchBarOpen" [(ngModel)]="searchQuery" (ionCancel)="closeSearch()"
+      (ionClear)="clearSearch()"></ion-searchbar>
   </ion-header>
 
   <!-- viewproducts -->
@@ -42,8 +26,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxJOUFmT96AXfPq9k_I6chbIVL3S4Jsz0w_N7RRO542cSEU4j5GEZBaKDY8CJdmjHAhI&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -53,8 +36,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnqPoi3UAAwMYLVd1VN6HvpQNBjTw2gtCe4BvC11UO_RPWkNaDfpob0lmWYqo6KBEl2E&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -64,8 +46,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -75,8 +56,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxJOUFmT96AXfPq9k_I6chbIVL3S4Jsz0w_N7RRO542cSEU4j5GEZBaKDY8CJdmjHAhI&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -86,8 +66,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -97,8 +76,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -108,8 +86,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -119,8 +96,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -130,8 +106,7 @@
               <div class="viewproducts-img">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
+                  alt="" />
               </div>
               <div class="viewproducts-content">
                 <p>Furits</p>
@@ -152,19 +127,11 @@
             </div>
             <h4>Collection items furits</h4>
             <ion-row>
-              <ion-col
-                size-xs="6"
-                size-sm="6"
-                size-lg="3"
-                size-md="4"
-                class="viewproducts-article-con"
-                (click)="openpopup()"
-              >
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
                 <div class="viewproducts-article-img">
                   <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                    alt=""
-                  />
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxJOUFmT96AXfPq9k_I6chbIVL3S4Jsz0w_N7RRO542cSEU4j5GEZBaKDY8CJdmjHAhI&usqp=CAU"
+                    alt="" />
                 </div>
                 <div class="viewproducts-article-content">
                   <h5>Fresh Furits</h5>
@@ -178,44 +145,187 @@
                       </button>
                       <span>{{count}} </span>
                       <button class="add-btn" clear (click)="increment()">
-                        <ion-icon name="add"></ion-icon>
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
                       </button>
                     </p>
                   </div>
                 </div>
               </ion-col>
-              <ion-col
-              size-xs="6"
-              size-sm="6"
-              size-lg="3"
-              size-md="4"
-              class="viewproducts-article-con"
-              (click)="openpopup()"
-            >
-              <div class="viewproducts-article-img">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8W5rPwlsW0RHWUmy0RYH7Wm1Zmbs_UKqrphlSbvDa3wgLwqVsdThoL4fRdAtgreZMvEs&usqp=CAU"
-                  alt=""
-                />
-              </div>
-              <div class="viewproducts-article-content">
-                <h5>Fresh Furits</h5>
-                <p>collection furits</p>
-                <span>1 piece x 3</span>
-                <div class="article-price">
-                  <span>₹341</span>
-                  <p>
-                    <button class="add-btn" clear (click)="decrement()">
-                      <ion-icon name="remove"></ion-icon>
-                    </button>
-                    <span>{{count}} </span>
-                    <button class="add-btn" clear (click)="increment()">
-                      <ion-icon name="add"></ion-icon>
-                    </button>
-                  </p>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://us.123rf.com/450wm/krol/krol1512/krol151200009/50040166-set-of-funny-cute-fruits-funny-food-cartoon-illustration-cute-stylish-characters.jpg?ver=6"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnqPoi3UAAwMYLVd1VN6HvpQNBjTw2gtCe4BvC11UO_RPWkNaDfpob0lmWYqo6KBEl2E&usqp=CAU"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBvbWVncmFuYXRlJTIwZnJ1aXR8ZW58MHx8MHx8fDA%3D"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" *ngFor="let slide of slides">
+                    <img [src]="slide.image" alt="Slide {{ slide.id }}" />
+                  </div>
                 </div>
               </div>
-            </ion-col>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxJOUFmT96AXfPq9k_I6chbIVL3S4Jsz0w_N7RRO542cSEU4j5GEZBaKDY8CJdmjHAhI&usqp=CAU"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://us.123rf.com/450wm/krol/krol1512/krol151200009/50040166-set-of-funny-cute-fruits-funny-food-cartoon-illustration-cute-stylish-characters.jpg?ver=6"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlnqPoi3UAAwMYLVd1VN6HvpQNBjTw2gtCe4BvC11UO_RPWkNaDfpob0lmWYqo6KBEl2E&usqp=CAU"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size-xs="6" size-sm="6" size-lg="3" size-md="4" class="viewproducts-article-con">
+                <div class="viewproducts-article-img">
+                  <img
+                    src="https://images.unsplash.com/photo-1574709755254-fcd942d09d5a?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBvbWVncmFuYXRlJTIwZnJ1aXR8ZW58MHx8MHx8fDA%3D"
+                    alt="" />
+                </div>
+                <div class="viewproducts-article-content">
+                  <h5>Fresh Furits</h5>
+                  <p>collection furits</p>
+                  <span>1 piece x 3</span>
+                  <div class="article-price">
+                    <span>₹341</span>
+                    <p>
+                      <button class="add-btn" clear (click)="decrement()">
+                        <ion-icon name="remove"></ion-icon>
+                      </button>
+                      <span>{{count}} </span>
+                      <button class="add-btn" clear (click)="increment()">
+                        <ion-icon name="add" (click)="openpopup()"></ion-icon>
+                      </button>
+                    </p>
+                  </div>
+                </div>
+              </ion-col>
             </ion-row>
           </div>
         </ion-col>
