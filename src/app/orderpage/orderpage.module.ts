@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { OrderpagePageRoutingModule } from './orderpage-routing.module';
 
 import { OrderpagePage } from './orderpage.page';
+import { FirstAlertComponent } from '../first-alert/first-alert.component';
 
 
 @NgModule({
@@ -16,6 +17,6 @@ import { OrderpagePage } from './orderpage.page';
     IonicModule,
     OrderpagePageRoutingModule
   ],
-  declarations: [OrderpagePage]
+  declarations: [OrderpagePage,FirstAlertComponent]
 })
 export class OrderpagePageModule {}

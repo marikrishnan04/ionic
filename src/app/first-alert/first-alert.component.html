@@ -1,0 +1,28 @@
+<!-- first-alert.component.html -->
+<!-- Your modal content with Swiper -->
+<ion-modal class="content-modal" id="open-modal" [isOpen]="isOpen" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+  <ng-template>
+    <div class="modal-con">
+      <p> Fruits Shop!</p>
+      <ion-icon name="close" (click)="onSubmit()"></ion-icon>
+      <!-- Swiper Container -->
+    </div>
+    <p style="color: gray;padding: 0 10px;">🍇 Welcome to Fresh Picks Fruits, where every bite is a burst of nature's goodness! 🍊</p>
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="swiper-slide" *ngFor="let slide of slide1">
+            <img [src]="slide.image" alt="Slide {{ slide.id }}" />
+          </div>
+        </div>
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- If we need pagination -->
+
+    </div>
+  </ng-template>
+</ion-modal>
+
+

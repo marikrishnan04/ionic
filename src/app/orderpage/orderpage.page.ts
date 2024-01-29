@@ -1,7 +1,6 @@
 // orderpage.page.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertController } from '@ionic/angular'; // Import the AlertController
 import Swiper from 'swiper';
 
 @Component({
@@ -14,8 +13,10 @@ export class OrderpagePage implements OnInit {
   closeicon = true;
   cancelicon = false;
   searchQuery: string = '';
+  image='https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg'
 
-  constructor(private router: Router, private alertController: AlertController) {} // Inject the AlertController
+
+  constructor(private router: Router ) {} // Inject the AlertController
 
   goViewproducts(data?: any, name?: any) {
     localStorage.setItem('productName', name);
@@ -30,6 +31,15 @@ export class OrderpagePage implements OnInit {
     { id: 4, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
     { id: 5, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
     { id: 6, image: 'https://freedesignfile.com/upload/2016/09/Creative-fruit-background-vector-graphic-01.jpg' },
+    // Add more slides as needed
+  ];
+  slide1 = [
+    { id: 1, image: 'https://st.depositphotos.com/1593759/2652/i/450/depositphotos_26521407-stock-photo-set-of-different-fruits-and.jpg' },
+    { id: 2, image: 'https://st.depositphotos.com/1593759/2652/i/450/depositphotos_26521407-stock-photo-set-of-different-fruits-and.jpg' },
+    { id: 3, image: 'https://st.depositphotos.com/1593759/2652/i/450/depositphotos_26521407-stock-photo-set-of-different-fruits-and.jpg' },
+    { id: 4, image: 'https://st.depositphotos.com/1593759/2652/i/450/depositphotos_26521407-stock-photo-set-of-different-fruits-and.jpg' },
+    { id: 5, image: 'https://st.depositphotos.com/1593759/2652/i/450/depositphotos_26521407-stock-photo-set-of-different-fruits-and.jpg' },
+    { id: 6, image: 'https://st.depositphotos.com/1593759/2652/i/450/depositphotos_26521407-stock-photo-set-of-different-fruits-and.jpg' },
     // Add more slides as needed
   ];
 
@@ -70,21 +80,10 @@ export class OrderpagePage implements OnInit {
         clickable: true,
       },
     });
-    const alert = await this.alertController.create({
-      header: 'Welcome!',
-      message: 'This is your first visit.',
-      buttons: [
-        {
-          text: 'OK',
-          handler: () => {
-            // Handle OK button click if needed
-          }
-        }
-      ],
-      cssClass: 'my-alert-class' // Add a custom CSS class
-    });
 
-    await alert.present();
 
   }
+
+
+
 }
