@@ -1,0 +1,198 @@
+* {
+  transition: 1s all ease !important;
+}
+.description{
+  overflow: auto;
+  height: 92vh;
+}
+.banner {
+  position: relative;
+  /* padding: 0 10px; */
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 0 10px;
+  img {
+    border-radius: 16px;
+    width: 100%;
+    margin-top: 10px;
+    height: 300px;
+    padding: 30px;
+  }
+}
+
+
+.circular-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #9e9e9e70; /* You can customize the color */
+  cursor: pointer;
+}
+.circle1 {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #9e9e9e70; /* You can customize the color */
+  cursor: pointer;
+}
+.circle2 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: #9e9e9e70; /* You can customize the color */
+  cursor: pointer;
+}
+/* description.page.scss */
+.circular-buttons {
+  // ... Your existing styling ...
+
+  .circle {
+    // ... Your existing styling ...
+
+    &.active {
+      background-color: #ff6347; // Customize the active color
+    }
+  }
+}
+.circular-buttons {
+  // ... Your existing styling ...
+
+  .circle1 {
+    // ... Your existing styling ...
+
+    &.active {
+      background-color: #ff6347; // Customize the active color
+    }
+  }
+}
+.circular-buttons {
+  // ... Your existing styling ...
+
+  .circle2 {
+    // ... Your existing styling ...
+
+    &.active {
+      background-color: #ff6347; // Customize the active color
+    }
+  }
+}
+.top-icon{
+  color: black;
+}
+ion-header{
+  display: flex;
+  align-items: center;
+  box-shadow: none;
+  p{
+    margin: 0;
+  }
+}
+.description-article-content {
+  text-align: start !important;
+  padding: 0px 10px;
+  ion-modal{
+    height: 30px !important;
+  }
+  h5 {
+    font-size: 18px;
+    padding-top: 8px;
+    padding: 10px 0;
+  }
+  p {
+    font-size: 16px;
+margin: 0 !important;
+    color: #9E9E9E;
+  }
+  span {
+    color: rgb(158, 158, 158);
+    font-size: 16px;
+  }
+  .article-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      color: black;
+      font-size: 20px;
+    }
+    p {
+      padding: 17px 7px;
+      border: solid 1px rgb(143 141 141 / 26%);
+      border-radius: 7px;
+      font-size: 27px;
+      color: rgb(14, 207, 14);
+      display: flex;
+      align-items: center;
+      height: 30px;
+      justify-content: space-between;
+      width: 37%;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 7px 0px;
+
+      ion-select::part(icon) {
+        color: #971e49;
+          display: none !important;
+      }
+      .select-wrapper {
+        border: none !important;
+      }
+      button {
+        color: rgb(14, 207, 14);
+        background: none;
+        font-size: 16px;
+      }
+      span {
+        color: rgb(14, 207, 14);
+        padding: 0 4px;
+        margin-bottom: 4px;
+      }
+    }
+
+
+
+  }
+
+
+}
+
+.description-frequently{
+  background-color: #f1836f30;
+  padding: 10px;
+  margin-top: 24px;
+  h5{
+    font-size: 14px;
+  }
+  p{
+    margin: 0;
+    font-size: 12px;
+    color: #808080b0;
+span{
+  color: tomato;
+  font-weight: 700;
+}
+  }
+
+}
+
+.product-description{
+  margin: 30px 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+padding: 10px;
+border-radius: 12px;
+p{
+  font-size: 16px;
+}
+span{
+  color: #8080806e;
+
+}
+}

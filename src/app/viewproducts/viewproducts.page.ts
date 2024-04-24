@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./viewproducts.page.scss'],
 })
 export class ViewproductsPage implements OnInit {
-
+  constructor(private router: Router) {}
   isSearchBarOpen = false;
   closeicon=true;
   cancelicon=false;
   searchQuery: string = '';
-  constructor(private router: Router) {}
+  activeSlideIndex: number = 0; // Track the active slide index
+
+
 
   image: any;
   name: any;
@@ -30,15 +32,17 @@ export class ViewproductsPage implements OnInit {
     this.router.navigate(['/view-carts']); // Replace 'view-carts' with the actual route of your new page
 
   }
+  goDescription() {
+    this.router.navigate(['/description']); // Replace 'viewproducts' with the actual route of your new page
+  }
 
   ngOnInit() {
-    this.initializeSwiper();
-    this.retrieveProductDetails();
+
   }
 
   private initializeSwiper() {
-    const swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 0,
       spaceBetween: 10,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -47,6 +51,11 @@ export class ViewproductsPage implements OnInit {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+      },
+      on: {
+        slideChange: () => {
+          this.activeSlideIndex = swiper.activeIndex;
+        },
       },
     });
   }

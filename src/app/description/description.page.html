@@ -1,0 +1,55 @@
+<!-- description.page.html -->
+<ion-header >
+  <ion-buttons  class="top-icon">
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+  <p>Select Fresh Furits</p>
+</ion-header>
+<div class="description">
+  <section class="banner">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let slide of slide1">
+          <img [src]="slide.image" alt="Slide {{ slide.id }}" />
+        </div>
+      </div>
+      <div class="circular-buttons">
+        <button class="circle" (click)="onCircularButtonClick(0)" [class.active]="activeSlideIndex === 0"></button>
+        <button class="circle1" (click)="onCircularButtonClick(1)" [class.active]="activeSlideIndex === 1"></button>
+        <button class="circle2" (click)="onCircularButtonClick(2)" [class.active]="activeSlideIndex === 2"></button>
+      </div>
+    </div>
+    <div class="description-article-content">
+      <p>collection furits</p>
+      <h5> Select Fresh Furits</h5>
+      <span>5kg</span>
+      <div class="article-price">
+        <span>₹341</span>
+        <p>
+          <button class="add-btn" clear (click)="decrement()">
+            <ion-icon name="remove"></ion-icon>
+          </button>
+          <span>{{count}} </span>
+          <button class="add-btn" clear (click)="increment()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </p>
+      </div>
+    </div>
+    <div class="description-frequently">
+      <h5>frequently bought together</h5>
+      <div>
+        <p>Dal and pules Fresh Furits <span>+2 more</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="product-description">
+    <p>Product Description</p>
+    <span>
+      A product description is a written copy that provides essential information about a product or service being sold online. It typically includes details such as features, benefits, specifications, and usage instructions</span>
+  </div>
+</div>
+
+
+
